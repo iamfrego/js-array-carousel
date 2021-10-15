@@ -25,13 +25,14 @@ const text = [
 
 
 const image = document.querySelector(`div.option`);
+const selectedImageToDisplay = document.getElementById('photo');
 
 
 for (let i = 0; (i < items.length); i++) {
 
-    const optionImage = `<div class="col imgContainer--${i}">
-                            <img src="${items[i]}" alt="">
+    const optionImage = `<div class="col-12 imgContainer--${i}">
+                            <img src="${items[i]}" alt="" id="photo" >
                         </div>`;
-    console.log(optionImage);
     image.innerHTML += optionImage;
 }
+

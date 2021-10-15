@@ -1,15 +1,30 @@
-.debug .selectedImage {
+.debug #selectedImage {
     background-color: green;
-    height: 400px;
-    width: 900px;
+    height: 100%;
+    width: 100%;
 }
 
-.debug .optionImage {
-    background-color: indigo;
+.container {
+    width: 2000px;
+}
+
+.optionImage {
+    width: 300px
+}
+
+.option img {
+    height: 150px;
     width: 300px;
 }
 
-.debug .option img {
-    height: 200px;
-    width: 400px;
+.buttons {
+    font-size: 5rem;
+    position: relative;
+    right: 80px;
+}
+
+.upBtn, .downBtn {
+    cursor: pointer;
+    margin: 1rem 0;
+    height: 100px;
 }
