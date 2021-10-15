@@ -24,12 +24,13 @@ const text = [
 ]
 
 const image = document.querySelector(`div.option`);
-const selectedImageToDisplay = document.getElementById('photo');
+const selectedImageToDisplay = document.getElementById('selectedImage');
+
 
 for (let i = 0; (i < items.length); i++) {
 
     const optionImage = `<div class="col-12 imgContainer--${i}">
-                            <img src="${items[i]}" alt="" id="photo" >
+                            <img src="${items[i]}" alt="">
                         </div>`;
     image.innerHTML += optionImage;
 }
@@ -42,14 +43,15 @@ for (let i = 0; i < items.length; i++) {
         if (selected > (items.length - 1)) {
             selected = 0
         }
+        console.log(items[selected])
     }
 
 
     function before() {
-        selected--;
         if (selected == 0) {
             selected = items.length
         }
+        selected--;
         console.log(items[selected])
 
     }
