@@ -23,10 +23,8 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
 
-
 const image = document.querySelector(`div.option`);
 const selectedImageToDisplay = document.getElementById('photo');
-
 
 for (let i = 0; (i < items.length); i++) {
 
@@ -35,4 +33,29 @@ for (let i = 0; (i < items.length); i++) {
                         </div>`;
     image.innerHTML += optionImage;
 }
+
+for (let i = 0; i < items.length; i++) {
+
+    let selected = 0;
+    function next() {
+        selected++;
+        if (selected >= items.length) {
+            selected = 0
+        }
+        console.log(items[selected])
+    }
+
+
+    function before() {
+        selected--;
+        if (selected == 0) {
+            selected = items.length
+        }
+        console.log(items[selected])
+
+    }
+
+}
+
+
 
