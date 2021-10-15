@@ -39,8 +39,11 @@ for (let i = 0; (i < items.length); i++) {
 
 let selected = 0;
 
-const SelectedImageToDisplay = `<div><p> ${title[selected]} <br> ${text[selected]}</p>
-                                <img src="${items[selected]}" alt=""></div>`;
+const SelectedImageToDisplay = `<div class="text-right">
+                                    <h4> ${title[selected]}</h4>
+                                    <p class="my-2"> <br> ${text[selected]}</p>
+                                    <img src="${items[selected]}" alt="">
+                                </div>`;
 imageToDisplay.innerHTML = SelectedImageToDisplay;
 
 
@@ -49,9 +52,11 @@ function next() {
     if (selected > (items.length - 1)) {
         selected = 0
     }
-    const SelectedImageToDisplay = `<div><p> ${title[selected]} <br> ${text[selected]}</p>
-                                <img src="${items[selected]}" alt=""></div>`;
-
+    const SelectedImageToDisplay = `<div class="text-right">  
+                                        <h4> ${title[selected]}</h4> 
+                                        <p class="my-2"> <br> ${text[selected]}</p>
+                                        <img src="${items[selected]}" alt="">
+                                    </div>`;
     imageToDisplay.innerHTML = SelectedImageToDisplay;
 }
 
@@ -61,12 +66,14 @@ function before() {
         selected = items.length
     }
     selected--;
-    const SelectedImageToDisplay = `<div><p> ${title[selected]} <br> ${text[selected]}</p>
-                                <img src="${items[selected]}" alt=""></div>`;
+    const SelectedImageToDisplay = `<div class="text-right">
+                                        <h4> ${title[selected]} </h4>
+                                        <p class="my-2"> <br> ${text[selected]}</p>
+                                        <img src="${items[selected]}" alt="">
+                                    </div>`;
 
     imageToDisplay.innerHTML = SelectedImageToDisplay;
 }
-
 
 
 

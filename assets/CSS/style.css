@@ -13,10 +13,10 @@
     height: 416px;
 }
 
-#selectedImage p {
+#selectedImage p, #selectedImage h4 {
     color: white;
     position: absolute;
-    top: 75%;
+    top: 70%;
     left: 5%;
 }
 
