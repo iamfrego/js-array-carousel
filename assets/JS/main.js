@@ -1,3 +1,4 @@
+
 const items = [
     'img/01.jpg',
     'img/02.jpg',
@@ -23,3 +24,14 @@ const text = [
 ]
 
 
+const image = document.querySelector(`div.option`);
+
+
+for (let i = 0; (i < items.length); i++) {
+
+    const optionImage = `<div class="col imgContainer--${i}">
+                            <img src="${items[i]}" alt="">
+                        </div>`;
+    console.log(optionImage);
+    image.innerHTML += optionImage;
+}

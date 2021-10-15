@@ -1,1 +1,15 @@
-.debug .selectedImage {}
+.debug .selectedImage {
+    background-color: green;
+    height: 400px;
+    width: 900px;
+}
+
+.debug .optionImage {
+    background-color: indigo;
+    width: 300px;
+}
+
+.debug .option img {
+    height: 200px;
+    width: 400px;
+}
