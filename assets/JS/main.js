@@ -39,10 +39,9 @@ for (let i = 0; i < items.length; i++) {
     let selected = 0;
     function next() {
         selected++;
-        if (selected >= items.length) {
+        if (selected > (items.length - 1)) {
             selected = 0
         }
-        console.log(items[selected])
     }
 
 
