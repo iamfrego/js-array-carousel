@@ -24,7 +24,8 @@ const text = [
 ]
 
 const image = document.querySelector(`div.option`);
-const selectedImageToDisplay = document.getElementById('selectedImage');
+
+const imageToDisplay = document.getElementById('selectedImage');
 
 
 for (let i = 0; (i < items.length); i++) {
@@ -35,28 +36,38 @@ for (let i = 0; (i < items.length); i++) {
     image.innerHTML += optionImage;
 }
 
-for (let i = 0; i < items.length; i++) {
 
-    let selected = 0;
-    function next() {
-        selected++;
-        if (selected > (items.length - 1)) {
-            selected = 0
-        }
-        console.log(items[selected])
+let selected = 0;
+
+const SelectedImageToDisplay = `<div><p> ${title[selected]} <br> ${text[selected]}</p>
+                                <img src="${items[selected]}" alt=""></div>`;
+imageToDisplay.innerHTML = SelectedImageToDisplay;
+
+
+function next() {
+    selected++;
+    if (selected > (items.length - 1)) {
+        selected = 0
     }
+    const SelectedImageToDisplay = `<div><p> ${title[selected]} <br> ${text[selected]}</p>
+                                <img src="${items[selected]}" alt=""></div>`;
 
-
-    function before() {
-        if (selected == 0) {
-            selected = items.length
-        }
-        selected--;
-        console.log(items[selected])
-
-    }
-
+    imageToDisplay.innerHTML = SelectedImageToDisplay;
 }
+
+
+function before() {
+    if (selected == 0) {
+        selected = items.length
+    }
+    selected--;
+    const SelectedImageToDisplay = `<div><p> ${title[selected]} <br> ${text[selected]}</p>
+                                <img src="${items[selected]}" alt=""></div>`;
+
+    imageToDisplay.innerHTML = SelectedImageToDisplay;
+}
+
+
 
 
 
